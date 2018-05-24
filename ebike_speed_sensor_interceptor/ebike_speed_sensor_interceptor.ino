@@ -15,15 +15,16 @@ int minimumPulseInterval = 268; //30 Kmh on the speedo
 int activeSense = 0;
 int activePulse = 0;
 
+//Runs once at startup
 void setup() {
 	pinMode(hallSensorPin, INPUT);
 	pinMode(electroMagnetPin, OUTPUT);
 	Serial.begin(9600);  
 }
 
+//IMPORTANT: We need to read every sense on the hall effect sensor so the code in loop() needs to be very lean
 void loop() {
 
-	//IMPORTANT: We need to read every sense on the hall effect sensor so the code in loop() needs to be very lean
 	//Read from the hall effect sensor for any active senses and set the current sense interval as the time between the last 2 senses   
 	hallSensorState = digitalRead(hallSensorPin);
 	if (hallSensorState == LOW) {
