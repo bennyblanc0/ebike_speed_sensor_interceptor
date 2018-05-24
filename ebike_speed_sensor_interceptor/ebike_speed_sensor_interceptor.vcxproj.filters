@@ -17,5 +17,9 @@
   <ItemGroup>
     <None Include="ebike_speed_sensor_interceptor.ino" />
   </ItemGroup>
- 
+  <ItemGroup>
+    <ClInclude Include="__vm\.ebike_speed_sensor_interceptor.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
